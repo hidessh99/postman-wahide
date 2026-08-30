@@ -1,0 +1,7 @@
+info:
+  name: 10-cronjob
+  type: folder
+  seq: 11
+
+request:
+  auth: inherit

@@ -1,0 +1,7 @@
+info:
+  name: 02-subscription
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit

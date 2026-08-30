@@ -1,0 +1,26 @@
+info:
+  name: update-plan
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{baseUrl}}/api/v1/admin/plans/PLAN_ID"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Enterprise Pro Updated",
+        "price": 350000,
+        "monthly_message_limit": 100000,
+        "max_devices": 15,
+        "max_agents": 50
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

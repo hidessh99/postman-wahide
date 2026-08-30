@@ -1,0 +1,26 @@
+info:
+  name: send-media-message
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/wa/messages/send"
+  body:
+    type: json
+    data: |-
+      {
+        "device_id": "DEVICE_ID",
+        "phone": "6281234567890",
+        "message": "Berikut adalah invoice langganan Anda.",
+        "media_url": "https://pub-r2.wahide.com/media/invoice_1001.pdf",
+        "file_name": "invoice_1001.pdf"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

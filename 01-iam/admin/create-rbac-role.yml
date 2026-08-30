@@ -1,0 +1,23 @@
+info:
+  name: create-rbac-role
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/admin/role"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "finance_manager",
+        "description": "Financial administrator role"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

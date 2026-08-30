@@ -1,0 +1,23 @@
+info:
+  name: reply-to-ticket
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/ticket/TICKET_ID/reply"
+  body:
+    type: json
+    data: |-
+      {
+        "message": "Berikut saya lampirkan screenshot log error yang muncul.",
+        "attachment_url": "https://pub-r2.wahide.com/tickets/screenshot_1.png"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

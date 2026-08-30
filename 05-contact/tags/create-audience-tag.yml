@@ -1,0 +1,23 @@
+info:
+  name: create-audience-tag
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/contacts/tags"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Pelanggan VIP 2026",
+        "color": "#4CAF50"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

@@ -1,0 +1,7 @@
+info:
+  name: 01-iam
+  type: folder
+  seq: 2
+
+request:
+  auth: inherit

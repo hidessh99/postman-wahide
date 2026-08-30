@@ -1,0 +1,24 @@
+info:
+  name: assign-subscription-to-tenant
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/admin/subscriptions/assign"
+  body:
+    type: json
+    data: |-
+      {
+        "tenant_id": "TENANT_ID",
+        "plan_id": "PLAN_ID",
+        "duration_months": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

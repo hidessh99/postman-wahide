@@ -1,0 +1,28 @@
+info:
+  name: create-broadcast-campaign
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/campaigns"
+  body:
+    type: json
+    data: |-
+      {
+        "device_id": "DEVICE_ID",
+        "tag_id": "TAG_ID",
+        "name": "Flash Sale Akhir Bulan",
+        "message": "Halo {name}, dapatkan diskon 50% untuk langganan Wahide hari ini! Gunakan voucher: {voucher_code}",
+        "media_url": "https://pub-r2.wahide.com/promo.jpg",
+        "min_delay": 5,
+        "max_delay": 15
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

@@ -1,0 +1,29 @@
+info:
+  name: meta-cloud-api-compatible-send
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/v18.0/DEVICE_ID/messages"
+  body:
+    type: json
+    data: |-
+      {
+        "messaging_product": "whatsapp",
+        "recipient_type": "individual",
+        "to": "6281234567890",
+        "type": "text",
+        "text": {
+          "preview_url": false,
+          "body": "Pesan kompatibel dengan format Meta WhatsApp Cloud API"
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

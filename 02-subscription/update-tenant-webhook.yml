@@ -1,0 +1,23 @@
+info:
+  name: update-tenant-webhook
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: "{{baseUrl}}/api/v1/subscription/webhook"
+  body:
+    type: json
+    data: |-
+      {
+        "webhook_url": "https://api.yourdomain.com/whatsapp/webhook",
+        "webhook_secret": "whsec_super_secret_token_12345"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

@@ -1,0 +1,25 @@
+info:
+  name: xendit-payment-webhook
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/webhook/xendit"
+  body:
+    type: json
+    data: |-
+      {
+        "id": "xendit_tx_12345",
+        "external_id": "BILLING_ID",
+        "status": "PAID",
+        "amount": 299000
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

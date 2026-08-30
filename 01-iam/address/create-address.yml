@@ -1,0 +1,26 @@
+info:
+  name: create-address
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/users/address"
+  body:
+    type: json
+    data: |-
+      {
+        "address_line": "Jl. Sudirman No. 123",
+        "city": "Jakarta Selatan",
+        "state": "DKI Jakarta",
+        "postal_code": "12190",
+        "country": "Indonesia"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

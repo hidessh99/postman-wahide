@@ -1,0 +1,31 @@
+info:
+  name: create-plan
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/admin/plans"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Enterprise Pro",
+        "price": 299000,
+        "monthly_message_limit": 50000,
+        "max_devices": 10,
+        "max_agents": 25,
+        "has_watermark": false,
+        "allow_attachment": true,
+        "allow_campaign": true,
+        "allow_autoreply": true,
+        "allow_schedule": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

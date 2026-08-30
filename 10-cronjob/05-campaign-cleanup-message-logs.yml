@@ -1,0 +1,19 @@
+info:
+  name: 05-campaign-cleanup-message-logs
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{baseUrl}}/api/cronjob/cleanup/message-logs"
+  headers:
+    - name: X-Cron-Secret
+      value: "{{cronSecret}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

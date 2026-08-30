@@ -1,0 +1,23 @@
+info:
+  name: add-user-balance
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/admin/user/add-balance"
+  body:
+    type: json
+    data: |-
+      {
+        "user_id": "USER_ID",
+        "amount": 50000
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

@@ -1,0 +1,23 @@
+info:
+  name: change-user-role
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/api/v1/admin/user/change-role"
+  body:
+    type: json
+    data: |-
+      {
+        "user_id": "USER_ID",
+        "role_id": "ROLE_ID"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

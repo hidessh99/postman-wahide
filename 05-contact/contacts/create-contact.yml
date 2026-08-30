@@ -1,0 +1,28 @@
+info:
+  name: create-contact
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/contacts"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Ahmad Dani",
+        "phone": "6281122334455",
+        "tag_id": "TAG_ID",
+        "variables": {
+          "voucher_code": "DISC50",
+          "kota": "Surabaya"
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

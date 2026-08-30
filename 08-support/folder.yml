@@ -1,0 +1,7 @@
+info:
+  name: 08-support
+  type: folder
+  seq: 9
+
+request:
+  auth: inherit

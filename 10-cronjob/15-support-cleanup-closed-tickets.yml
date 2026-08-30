@@ -1,0 +1,19 @@
+info:
+  name: 15-support-cleanup-closed-tickets
+  type: http
+  seq: 15
+
+http:
+  method: GET
+  url: "{{baseUrl}}/api/cronjob/cleanup/tickets"
+  headers:
+    - name: X-Cron-Secret
+      value: "{{cronSecret}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

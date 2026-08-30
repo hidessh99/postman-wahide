@@ -1,0 +1,25 @@
+info:
+  name: create-team-agent
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/tenant/agents"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "CS Sarah",
+        "email": "sarah@tenant.com",
+        "password": "AgentPassword123!",
+        "phone_number": "6289876543210"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

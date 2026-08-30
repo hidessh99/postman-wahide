@@ -2,6 +2,7 @@ opencollection: 1.0.0
 
 info:
   name: Wahide Enterprise REST API
+  version: v1
 config:
   proxy:
     inherit: true

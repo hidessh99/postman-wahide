@@ -1,0 +1,2008 @@
+openapi: 3.0.0
+info:
+  title: openapi
+  version: 1.0.0
+paths:
+  /health/liveness:
+    get:
+      summary: k8s-liveness
+      operationId: g_web2026_postman-wahide_copy_00-health_k8s-liveness_yml
+      description: ''
+      tags:
+        - 00-health
+      responses:
+        '200':
+          description: ''
+  /health:
+    get:
+      summary: liveness-check
+      operationId: g_web2026_postman-wahide_copy_00-health_liveness-check_yml
+      description: ''
+      tags:
+        - 00-health
+      responses:
+        '200':
+          description: ''
+  /health/ready:
+    get:
+      summary: readiness-check
+      operationId: g_web2026_postman-wahide_copy_00-health_readiness-check_yml
+      description: ''
+      tags:
+        - 00-health
+      responses:
+        '200':
+          description: ''
+  /api/v1/auth/forgot-password:
+    post:
+      summary: forgot-password
+      operationId: g_web2026_postman-wahide_copy_01-iam_auth_forgot-password_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/forgot-password'
+  /api/v1/auth/token:
+    get:
+      summary: get-current-apikey
+      operationId: g_web2026_postman-wahide_copy_01-iam_auth_get-current-apikey_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+    post:
+      summary: generate-apikey-token
+      operationId: g_web2026_postman-wahide_copy_01-iam_auth_generate-apikey-token_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+    delete:
+      summary: revoke-apikey
+      operationId: g_web2026_postman-wahide_copy_01-iam_auth_revoke-apikey_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+  /api/v1/auth/google/login:
+    get:
+      summary: google-login-url
+      operationId: g_web2026_postman-wahide_copy_01-iam_auth_google-login-url_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+  /api/v1/auth/login:
+    post:
+      summary: login
+      operationId: g_web2026_postman-wahide_copy_01-iam_auth_login_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/login'
+  /api/v1/auth/sessions:
+    get:
+      summary: list-active-sessions
+      operationId: g_web2026_postman-wahide_copy_01-iam_auth_list-active-sessions_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+  /api/v1/auth/sessions/logout-all:
+    post:
+      summary: logout-all-sessions
+      operationId: g_web2026_postman-wahide_copy_01-iam_auth_logout-all-sessions_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+  /api/v1/auth/logout:
+    post:
+      summary: logout
+      operationId: g_web2026_postman-wahide_copy_01-iam_auth_logout_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+  /api/v1/auth/register:
+    post:
+      summary: register
+      operationId: g_web2026_postman-wahide_copy_01-iam_auth_register_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/register'
+  /api/v1/auth/verify/resend:
+    post:
+      summary: resend-verification-email
+      operationId: g_web2026_postman-wahide_copy_01-iam_auth_resend-verification-email_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/resend-verification-email'
+  /api/v1/auth/reset-password:
+    post:
+      summary: reset-password
+      operationId: g_web2026_postman-wahide_copy_01-iam_auth_reset-password_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/reset-password'
+  /api/v1/auth/verify:
+    get:
+      summary: verify-email
+      operationId: g_web2026_postman-wahide_copy_01-iam_auth_verify-email_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: token
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: VERIFICATION_TOKEN_HERE
+  /api/v1/users/dashboard/stats:
+    get:
+      summary: get-user-dashboard-stats
+      operationId: g_web2026_postman-wahide_copy_01-iam_users_get-user-dashboard-stats_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+  /api/v1/users/change-password:
+    put:
+      summary: change-password
+      operationId: g_web2026_postman-wahide_copy_01-iam_users_change-password_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/change-password'
+  /api/v1/users/profile:
+    get:
+      summary: get-my-profile
+      operationId: g_web2026_postman-wahide_copy_01-iam_users_get-my-profile_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+  /api/v1/users/address/ADDRESS_ID:
+    delete:
+      summary: delete-address
+      operationId: g_web2026_postman-wahide_copy_01-iam_address_delete-address_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+    get:
+      summary: get-address-by-id
+      operationId: g_web2026_postman-wahide_copy_01-iam_address_get-address-by-id_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+  /api/v1/users/address:
+    post:
+      summary: create-address
+      operationId: g_web2026_postman-wahide_copy_01-iam_address_create-address_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/create-address'
+    get:
+      summary: list-addresses
+      operationId: g_web2026_postman-wahide_copy_01-iam_address_list-addresses_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+  /api/v1/users/address/upsert:
+    post:
+      summary: upsert-address
+      operationId: g_web2026_postman-wahide_copy_01-iam_address_upsert-address_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/upsert-address'
+  /api/v1/tenant/agents/AGENT_USER_ID:
+    delete:
+      summary: delete-team-agent
+      operationId: g_web2026_postman-wahide_copy_01-iam_agents_delete-team-agent_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+  /api/v1/tenant/agents:
+    get:
+      summary: list-team-agents
+      operationId: g_web2026_postman-wahide_copy_01-iam_agents_list-team-agents_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+    post:
+      summary: create-team-agent
+      operationId: g_web2026_postman-wahide_copy_01-iam_agents_create-team-agent_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/create-team-agent'
+  /api/v1/admin/user/add-balance:
+    post:
+      summary: add-user-balance
+      operationId: g_web2026_postman-wahide_copy_01-iam_admin_add-user-balance_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/add-user-balance'
+  /api/v1/admin/user/change-role:
+    patch:
+      summary: change-user-role
+      operationId: g_web2026_postman-wahide_copy_01-iam_admin_change-user-role_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/change-user-role'
+  /api/v1/admin/role:
+    post:
+      summary: create-rbac-role
+      operationId: g_web2026_postman-wahide_copy_01-iam_admin_create-rbac-role_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/create-rbac-role'
+    get:
+      summary: list-rbac-roles
+      operationId: g_web2026_postman-wahide_copy_01-iam_admin_list-rbac-roles_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+  /api/v1/admin/dashboard/stats:
+    get:
+      summary: get-admin-dashboard-stats
+      operationId: g_web2026_postman-wahide_copy_01-iam_admin_get-admin-dashboard-stats_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+  /api/v1/admin/user:
+    get:
+      summary: list-all-users
+      operationId: g_web2026_postman-wahide_copy_01-iam_admin_list-all-users_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: page
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: integer
+            format: int32
+          example: '1'
+        - name: page_size
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: integer
+            format: int32
+          example: '20'
+        - name: search
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+  /api/v1/admin/user/USER_ID:
+    get:
+      summary: get-user-by-id
+      operationId: g_web2026_postman-wahide_copy_01-iam_admin_get-user-by-id_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+    put:
+      summary: update-user
+      operationId: g_web2026_postman-wahide_copy_01-iam_admin_update-user_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/update-user'
+  /api/v1/admin/user-activity:
+    get:
+      summary: list-user-activities
+      operationId: g_web2026_postman-wahide_copy_01-iam_admin_list-user-activities_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+  /api/v1/admin/user-log:
+    get:
+      summary: list-user-login-logs
+      operationId: g_web2026_postman-wahide_copy_01-iam_admin_list-user-login-logs_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+  /api/v1/admin/user/reduce-balance:
+    post:
+      summary: reduce-user-balance
+      operationId: g_web2026_postman-wahide_copy_01-iam_admin_reduce-user-balance_yml
+      description: ''
+      tags:
+        - 01-iam
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/reduce-user-balance'
+  /api/v1/subscription:
+    get:
+      summary: get-tenant-subscription
+      operationId: >-
+        g_web2026_postman-wahide_copy_02-subscription_get-tenant-subscription_yml
+      description: ''
+      tags:
+        - 02-subscription
+      responses:
+        '200':
+          description: ''
+  /api/v1/plans:
+    get:
+      summary: list-public-plans
+      operationId: g_web2026_postman-wahide_copy_02-subscription_list-public-plans_yml
+      description: ''
+      tags:
+        - 02-subscription
+      responses:
+        '200':
+          description: ''
+  /api/v1/subscription/webhook:
+    put:
+      summary: update-tenant-webhook
+      operationId: g_web2026_postman-wahide_copy_02-subscription_update-tenant-webhook_yml
+      description: ''
+      tags:
+        - 02-subscription
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/update-tenant-webhook'
+  /api/v1/admin/plans:
+    post:
+      summary: create-plan
+      operationId: g_web2026_postman-wahide_copy_02-subscription_admin_create-plan_yml
+      description: ''
+      tags:
+        - 02-subscription
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/create-plan'
+  /api/v1/admin/subscriptions/assign:
+    post:
+      summary: assign-subscription-to-tenant
+      operationId: >-
+        g_web2026_postman-wahide_copy_02-subscription_admin_assign-subscription-to-tenant_yml
+      description: ''
+      tags:
+        - 02-subscription
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/assign-subscription-to-tenant'
+  /api/v1/admin/plans/PLAN_ID:
+    put:
+      summary: update-plan
+      operationId: g_web2026_postman-wahide_copy_02-subscription_admin_update-plan_yml
+      description: ''
+      tags:
+        - 02-subscription
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/update-plan'
+    delete:
+      summary: delete-plan
+      operationId: g_web2026_postman-wahide_copy_02-subscription_admin_delete-plan_yml
+      description: ''
+      tags:
+        - 02-subscription
+      responses:
+        '200':
+          description: ''
+  /api/v1/wa/devices:
+    post:
+      summary: create-device-slot
+      operationId: g_web2026_postman-wahide_copy_03-whatsapp_devices_create-device-slot_yml
+      description: ''
+      tags:
+        - 03-whatsapp
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/create-device-slot'
+    get:
+      summary: list-tenant-devices
+      operationId: >-
+        g_web2026_postman-wahide_copy_03-whatsapp_devices_list-tenant-devices_yml
+      description: ''
+      tags:
+        - 03-whatsapp
+      responses:
+        '200':
+          description: ''
+  /api/v1/wa/devices/DEVICE_ID:
+    delete:
+      summary: delete-device-slot
+      operationId: g_web2026_postman-wahide_copy_03-whatsapp_devices_delete-device-slot_yml
+      description: ''
+      tags:
+        - 03-whatsapp
+      responses:
+        '200':
+          description: ''
+  /api/v1/wa/devices/DEVICE_ID/disconnect:
+    post:
+      summary: disconnect-device
+      operationId: g_web2026_postman-wahide_copy_03-whatsapp_devices_disconnect-device_yml
+      description: ''
+      tags:
+        - 03-whatsapp
+      responses:
+        '200':
+          description: ''
+  /api/v1/wa/devices/DEVICE_ID/pair:
+    post:
+      summary: pair-device-qr-code
+      operationId: >-
+        g_web2026_postman-wahide_copy_03-whatsapp_devices_pair-device-qr-code_yml
+      description: ''
+      tags:
+        - 03-whatsapp
+      responses:
+        '200':
+          description: ''
+  /api/v1/v18.0/DEVICE_ID/messages:
+    post:
+      summary: meta-cloud-api-compatible-send
+      operationId: >-
+        g_web2026_postman-wahide_copy_03-whatsapp_messages_meta-cloud-api-compatible-send_yml
+      description: ''
+      tags:
+        - 03-whatsapp
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/meta-cloud-api-compatible-send'
+  /api/v1/wa/messages/send:
+    post:
+      summary: send-instant-text-message
+      operationId: >-
+        g_web2026_postman-wahide_copy_03-whatsapp_messages_send-instant-text-message_yml
+      description: ''
+      tags:
+        - 03-whatsapp
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/send-instant-text-message'
+      x-bruno-variants:
+        - summary: send-media-message
+          operationId: >-
+            g_web2026_postman-wahide_copy_03-whatsapp_messages_send-media-message_yml
+          description: ''
+          tags:
+            - 03-whatsapp
+          responses:
+            '200':
+              description: ''
+          requestBody:
+            $ref: '#/components/requestBodies/send-media-message'
+  /api/v1/campaigns:
+    post:
+      summary: create-broadcast-campaign
+      operationId: g_web2026_postman-wahide_copy_04-campaign_create-broadcast-campaign_yml
+      description: ''
+      tags:
+        - 04-campaign
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/create-broadcast-campaign'
+    get:
+      summary: list-campaigns
+      operationId: g_web2026_postman-wahide_copy_04-campaign_list-campaigns_yml
+      description: ''
+      tags:
+        - 04-campaign
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: page
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: integer
+            format: int32
+          example: '1'
+        - name: page_size
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: integer
+            format: int32
+          example: '20'
+  /api/v1/campaigns/CAMPAIGN_ID/start:
+    post:
+      summary: start-campaign-dispatch
+      operationId: g_web2026_postman-wahide_copy_04-campaign_start-campaign-dispatch_yml
+      description: ''
+      tags:
+        - 04-campaign
+      responses:
+        '200':
+          description: ''
+  /api/v1/campaigns/logs:
+    get:
+      summary: list-message-audit-logs
+      operationId: g_web2026_postman-wahide_copy_04-campaign_list-message-audit-logs_yml
+      description: ''
+      tags:
+        - 04-campaign
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: page
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: integer
+            format: int32
+          example: '1'
+        - name: page_size
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: integer
+            format: int32
+          example: '50'
+        - name: status
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: SENT
+  /api/v1/contacts/bulk:
+    post:
+      summary: bulk-import-contacts
+      operationId: >-
+        g_web2026_postman-wahide_copy_05-contact_contacts_bulk-import-contacts_yml
+      description: ''
+      tags:
+        - 05-contact
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/bulk-import-contacts'
+  /api/v1/contacts:
+    post:
+      summary: create-contact
+      operationId: g_web2026_postman-wahide_copy_05-contact_contacts_create-contact_yml
+      description: ''
+      tags:
+        - 05-contact
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/create-contact'
+    get:
+      summary: list-contacts
+      operationId: g_web2026_postman-wahide_copy_05-contact_contacts_list-contacts_yml
+      description: ''
+      tags:
+        - 05-contact
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: page
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: integer
+            format: int32
+          example: '1'
+        - name: page_size
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: integer
+            format: int32
+          example: '50'
+        - name: tag_id
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+        - name: search
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+  /api/v1/contacts/tags:
+    get:
+      summary: list-audience-tags
+      operationId: g_web2026_postman-wahide_copy_05-contact_tags_list-audience-tags_yml
+      description: ''
+      tags:
+        - 05-contact
+      responses:
+        '200':
+          description: ''
+    post:
+      summary: create-audience-tag
+      operationId: g_web2026_postman-wahide_copy_05-contact_tags_create-audience-tag_yml
+      description: ''
+      tags:
+        - 05-contact
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/create-audience-tag'
+  /api/v1/billing:
+    post:
+      summary: create-billing-order
+      operationId: >-
+        g_web2026_postman-wahide_copy_06-finance_billing_create-billing-order_yml
+      description: ''
+      tags:
+        - 06-finance
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/create-billing-order'
+    get:
+      summary: list-billing-transactions
+      operationId: >-
+        g_web2026_postman-wahide_copy_06-finance_billing_list-billing-transactions_yml
+      description: ''
+      tags:
+        - 06-finance
+      responses:
+        '200':
+          description: ''
+  /api/v1/billing/BILLING_ID:
+    get:
+      summary: get-billing-detail
+      operationId: g_web2026_postman-wahide_copy_06-finance_billing_get-billing-detail_yml
+      description: ''
+      tags:
+        - 06-finance
+      responses:
+        '200':
+          description: ''
+  /api/v1/invoice/INVOICE_ID:
+    get:
+      summary: get-invoice-detail
+      operationId: g_web2026_postman-wahide_copy_06-finance_invoices_get-invoice-detail_yml
+      description: ''
+      tags:
+        - 06-finance
+      responses:
+        '200':
+          description: ''
+  /api/v1/invoice:
+    get:
+      summary: list-invoices
+      operationId: g_web2026_postman-wahide_copy_06-finance_invoices_list-invoices_yml
+      description: ''
+      tags:
+        - 06-finance
+      responses:
+        '200':
+          description: ''
+  /api/v1/report/always:
+    get:
+      summary: get-accumulative-report
+      operationId: >-
+        g_web2026_postman-wahide_copy_06-finance_reports_get-accumulative-report_yml
+      description: ''
+      tags:
+        - 06-finance
+      responses:
+        '200':
+          description: ''
+  /api/v1/report/month:
+    get:
+      summary: get-monthly-report
+      operationId: g_web2026_postman-wahide_copy_06-finance_reports_get-monthly-report_yml
+      description: ''
+      tags:
+        - 06-finance
+      responses:
+        '200':
+          description: ''
+  /api/v1/report/payas:
+    get:
+      summary: get-payas-report
+      operationId: g_web2026_postman-wahide_copy_06-finance_reports_get-payas-report_yml
+      description: ''
+      tags:
+        - 06-finance
+      responses:
+        '200':
+          description: ''
+  /api/v1/vouchers/validate:
+    post:
+      summary: validate-voucher-code
+      operationId: >-
+        g_web2026_postman-wahide_copy_06-finance_vouchers_validate-voucher-code_yml
+      description: ''
+      tags:
+        - 06-finance
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/validate-voucher-code'
+  /api/v1/webhook/xendit:
+    post:
+      summary: xendit-payment-webhook
+      operationId: >-
+        g_web2026_postman-wahide_copy_06-finance_webhooks_xendit-payment-webhook_yml
+      description: ''
+      tags:
+        - 06-finance
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/xendit-payment-webhook'
+  /api/v1/posts/panduan-whatsapp-gateway:
+    get:
+      summary: get-post-by-slug
+      operationId: g_web2026_postman-wahide_copy_07-content_posts_get-post-by-slug_yml
+      description: ''
+      tags:
+        - 07-content
+      responses:
+        '200':
+          description: ''
+  /api/v1/posts:
+    get:
+      summary: list-public-posts
+      operationId: g_web2026_postman-wahide_copy_07-content_posts_list-public-posts_yml
+      description: ''
+      tags:
+        - 07-content
+      responses:
+        '200':
+          description: ''
+  /api/v1/upload/presign:
+    get:
+      summary: get-presigned-upload-url
+      operationId: >-
+        g_web2026_postman-wahide_copy_07-content_storage_get-presigned-upload-url_yml
+      description: ''
+      tags:
+        - 07-content
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: filename
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: attachment.png
+        - name: content_type
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: image/png
+  /api/v1/settings:
+    get:
+      summary: get-public-settings
+      operationId: >-
+        g_web2026_postman-wahide_copy_07-content_settings_get-public-settings_yml
+      description: ''
+      tags:
+        - 07-content
+      responses:
+        '200':
+          description: ''
+  /api/v1/ticket/TICKET_ID/close:
+    patch:
+      summary: close-ticket
+      operationId: g_web2026_postman-wahide_copy_08-support_close-ticket_yml
+      description: ''
+      tags:
+        - 08-support
+      responses:
+        '200':
+          description: ''
+  /api/v1/ticket/TICKET_ID:
+    get:
+      summary: get-ticket-detail
+      operationId: g_web2026_postman-wahide_copy_08-support_get-ticket-detail_yml
+      description: ''
+      tags:
+        - 08-support
+      responses:
+        '200':
+          description: ''
+  /api/v1/ticket:
+    post:
+      summary: create-support-ticket
+      operationId: g_web2026_postman-wahide_copy_08-support_create-support-ticket_yml
+      description: ''
+      tags:
+        - 08-support
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/create-support-ticket'
+    get:
+      summary: list-my-tickets
+      operationId: g_web2026_postman-wahide_copy_08-support_list-my-tickets_yml
+      description: ''
+      tags:
+        - 08-support
+      responses:
+        '200':
+          description: ''
+  /api/v1/ticket/TICKET_ID/reply:
+    post:
+      summary: reply-to-ticket
+      operationId: g_web2026_postman-wahide_copy_08-support_reply-to-ticket_yml
+      description: ''
+      tags:
+        - 08-support
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/reply-to-ticket'
+  /api/v1/admin/queue:
+    get:
+      summary: list-notification-queues
+      operationId: >-
+        g_web2026_postman-wahide_copy_09-notification_admin_list-notification-queues_yml
+      description: ''
+      tags:
+        - 09-notification
+      responses:
+        '200':
+          description: ''
+  /api/v1/admin/broadcast/all:
+    post:
+      summary: broadcast-notification-all-users
+      operationId: >-
+        g_web2026_postman-wahide_copy_09-notification_admin_broadcast-notification-all-users_yml
+      description: ''
+      tags:
+        - 09-notification
+      responses:
+        '200':
+          description: ''
+      requestBody:
+        $ref: '#/components/requestBodies/broadcast-notification-all-users'
+  /api/cronjob/subscription/reset-usage:
+    get:
+      summary: 01-subscription-reset-monthly-usage
+      operationId: >-
+        g_web2026_postman-wahide_copy_10-cronjob_01-subscription-reset-monthly-usage_yml
+      description: ''
+      tags:
+        - 10-cronjob
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: X-Cron-Secret
+          in: header
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: '{{cronSecret}}'
+  /api/cronjob/subscription/check-expired:
+    get:
+      summary: 02-subscription-check-expired
+      operationId: >-
+        g_web2026_postman-wahide_copy_10-cronjob_02-subscription-check-expired_yml
+      description: ''
+      tags:
+        - 10-cronjob
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: X-Cron-Secret
+          in: header
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: '{{cronSecret}}'
+  /api/cronjob/whatsapp/cleanup-devices:
+    get:
+      summary: 03-whatsapp-cleanup-zombie-devices
+      operationId: >-
+        g_web2026_postman-wahide_copy_10-cronjob_03-whatsapp-cleanup-zombie-devices_yml
+      description: ''
+      tags:
+        - 10-cronjob
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: X-Cron-Secret
+          in: header
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: '{{cronSecret}}'
+  /api/cronjob/whatsapp/reset-daily-sent:
+    get:
+      summary: 04-whatsapp-reset-daily-sent
+      operationId: >-
+        g_web2026_postman-wahide_copy_10-cronjob_04-whatsapp-reset-daily-sent_yml
+      description: ''
+      tags:
+        - 10-cronjob
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: X-Cron-Secret
+          in: header
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: '{{cronSecret}}'
+  /api/cronjob/cleanup/queues:
+    get:
+      summary: 06-notification-cleanup-queues
+      operationId: >-
+        g_web2026_postman-wahide_copy_10-cronjob_06-notification-cleanup-queues_yml
+      description: ''
+      tags:
+        - 10-cronjob
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: X-Cron-Secret
+          in: header
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: '{{cronSecret}}'
+  /api/cronjob/cleanup/message-logs:
+    get:
+      summary: 05-campaign-cleanup-message-logs
+      operationId: >-
+        g_web2026_postman-wahide_copy_10-cronjob_05-campaign-cleanup-message-logs_yml
+      description: ''
+      tags:
+        - 10-cronjob
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: X-Cron-Secret
+          in: header
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: '{{cronSecret}}'
+  /api/cronjob/cleanup/idempotency-keys:
+    get:
+      summary: 07-notification-cleanup-idempotency-keys
+      operationId: >-
+        g_web2026_postman-wahide_copy_10-cronjob_07-notification-cleanup-idempotency-keys_yml
+      description: ''
+      tags:
+        - 10-cronjob
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: X-Cron-Secret
+          in: header
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: '{{cronSecret}}'
+  /api/cronjob/cleanup/activities:
+    get:
+      summary: 08-iam-cleanup-activities
+      operationId: g_web2026_postman-wahide_copy_10-cronjob_08-iam-cleanup-activities_yml
+      description: ''
+      tags:
+        - 10-cronjob
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: X-Cron-Secret
+          in: header
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: '{{cronSecret}}'
+  /api/cronjob/cleanup/user-logs:
+    get:
+      summary: 09-iam-cleanup-user-logs
+      operationId: g_web2026_postman-wahide_copy_10-cronjob_09-iam-cleanup-user-logs_yml
+      description: ''
+      tags:
+        - 10-cronjob
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: X-Cron-Secret
+          in: header
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: '{{cronSecret}}'
+  /api/cronjob/cleanup/verifications:
+    get:
+      summary: 10-iam-cleanup-verifications
+      operationId: >-
+        g_web2026_postman-wahide_copy_10-cronjob_10-iam-cleanup-verifications_yml
+      description: ''
+      tags:
+        - 10-cronjob
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: X-Cron-Secret
+          in: header
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: '{{cronSecret}}'
+  /api/cronjob/cleanup/storage-r2:
+    get:
+      summary: 11-content-cleanup-storage-r2
+      operationId: >-
+        g_web2026_postman-wahide_copy_10-cronjob_11-content-cleanup-storage-r2_yml
+      description: ''
+      tags:
+        - 10-cronjob
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: X-Cron-Secret
+          in: header
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: '{{cronSecret}}'
+  /api/cronjob/cleanup/invoices:
+    get:
+      summary: 13-finance-cleanup-invoices
+      operationId: g_web2026_postman-wahide_copy_10-cronjob_13-finance-cleanup-invoices_yml
+      description: ''
+      tags:
+        - 10-cronjob
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: X-Cron-Secret
+          in: header
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: '{{cronSecret}}'
+  /api/cronjob/expired-topup:
+    get:
+      summary: 12-finance-check-expired-topup
+      operationId: >-
+        g_web2026_postman-wahide_copy_10-cronjob_12-finance-check-expired-topup_yml
+      description: ''
+      tags:
+        - 10-cronjob
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: X-Cron-Secret
+          in: header
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: '{{cronSecret}}'
+  /api/cronjob/cleanup/income-pending:
+    get:
+      summary: 14-finance-cleanup-income-pending
+      operationId: >-
+        g_web2026_postman-wahide_copy_10-cronjob_14-finance-cleanup-income-pending_yml
+      description: ''
+      tags:
+        - 10-cronjob
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: X-Cron-Secret
+          in: header
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: '{{cronSecret}}'
+  /api/cronjob/cleanup/tickets:
+    get:
+      summary: 15-support-cleanup-closed-tickets
+      operationId: >-
+        g_web2026_postman-wahide_copy_10-cronjob_15-support-cleanup-closed-tickets_yml
+      description: ''
+      tags:
+        - 10-cronjob
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: X-Cron-Secret
+          in: header
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: '{{cronSecret}}'
+servers: []
+components:
+  schemas:
+    forgot-password:
+      type: object
+      properties:
+        email:
+          type: string
+      example:
+        email: budi@example.com
+    login:
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+      example:
+        email: budi@example.com
+        password: SecurePassword123!
+    register:
+      type: object
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+        phone_number:
+          type: string
+      example:
+        name: Budi Santoso
+        email: budi@example.com
+        password: SecurePassword123!
+        phone_number: '6281234567890'
+    resend-verification-email:
+      type: object
+      properties:
+        email:
+          type: string
+      example:
+        email: budi@example.com
+    reset-password:
+      type: object
+      properties:
+        token:
+          type: string
+        password:
+          type: string
+      example:
+        token: RESET_TOKEN_HERE
+        password: NewSecurePassword123!
+    change-password:
+      type: object
+      properties:
+        old_password:
+          type: string
+        new_password:
+          type: string
+      example:
+        old_password: OldPassword123!
+        new_password: NewSecurePassword123!
+    create-address:
+      type: object
+      properties:
+        address_line:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        postal_code:
+          type: string
+        country:
+          type: string
+      example:
+        address_line: Jl. Sudirman No. 123
+        city: Jakarta Selatan
+        state: DKI Jakarta
+        postal_code: '12190'
+        country: Indonesia
+    upsert-address:
+      type: object
+      properties:
+        address_line:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        postal_code:
+          type: string
+        country:
+          type: string
+      example:
+        address_line: Jl. Sudirman No. 123
+        city: Jakarta Selatan
+        state: DKI Jakarta
+        postal_code: '12190'
+        country: Indonesia
+    create-team-agent:
+      type: object
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+        phone_number:
+          type: string
+      example:
+        name: CS Sarah
+        email: sarah@tenant.com
+        password: AgentPassword123!
+        phone_number: '6289876543210'
+    add-user-balance:
+      type: object
+      properties:
+        user_id:
+          type: string
+        amount:
+          type: integer
+      example:
+        user_id: USER_ID
+        amount: 50000
+    change-user-role:
+      type: object
+      properties:
+        user_id:
+          type: string
+        role_id:
+          type: string
+      example:
+        user_id: USER_ID
+        role_id: ROLE_ID
+    create-rbac-role:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+      example:
+        name: finance_manager
+        description: Financial administrator role
+    update-user:
+      type: object
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+        phone_number:
+          type: string
+        is_active:
+          type: boolean
+      example:
+        name: Updated User Name
+        email: updated@example.com
+        phone_number: '6281234567890'
+        is_active: true
+    reduce-user-balance:
+      type: object
+      properties:
+        user_id:
+          type: string
+        amount:
+          type: integer
+      example:
+        user_id: USER_ID
+        amount: 10000
+    update-tenant-webhook:
+      type: object
+      properties:
+        webhook_url:
+          type: string
+        webhook_secret:
+          type: string
+      example:
+        webhook_url: https://api.yourdomain.com/whatsapp/webhook
+        webhook_secret: whsec_super_secret_token_12345
+    create-plan:
+      type: object
+      properties:
+        name:
+          type: string
+        price:
+          type: integer
+        monthly_message_limit:
+          type: integer
+        max_devices:
+          type: integer
+        max_agents:
+          type: integer
+        has_watermark:
+          type: boolean
+        allow_attachment:
+          type: boolean
+        allow_campaign:
+          type: boolean
+        allow_autoreply:
+          type: boolean
+        allow_schedule:
+          type: boolean
+      example:
+        name: Enterprise Pro
+        price: 299000
+        monthly_message_limit: 50000
+        max_devices: 10
+        max_agents: 25
+        has_watermark: false
+        allow_attachment: true
+        allow_campaign: true
+        allow_autoreply: true
+        allow_schedule: true
+    assign-subscription-to-tenant:
+      type: object
+      properties:
+        tenant_id:
+          type: string
+        plan_id:
+          type: string
+        duration_months:
+          type: integer
+      example:
+        tenant_id: TENANT_ID
+        plan_id: PLAN_ID
+        duration_months: 1
+    update-plan:
+      type: object
+      properties:
+        name:
+          type: string
+        price:
+          type: integer
+        monthly_message_limit:
+          type: integer
+        max_devices:
+          type: integer
+        max_agents:
+          type: integer
+      example:
+        name: Enterprise Pro Updated
+        price: 350000
+        monthly_message_limit: 100000
+        max_devices: 15
+        max_agents: 50
+    create-device-slot:
+      type: object
+      properties:
+        push_name:
+          type: string
+      example:
+        push_name: Wahide Customer Service 1
+    meta-cloud-api-compatible-send:
+      type: object
+      properties:
+        messaging_product:
+          type: string
+        recipient_type:
+          type: string
+        to:
+          type: string
+        type:
+          type: string
+        text:
+          type: object
+          properties:
+            preview_url:
+              type: boolean
+            body:
+              type: string
+      example:
+        messaging_product: whatsapp
+        recipient_type: individual
+        to: '6281234567890'
+        type: text
+        text:
+          preview_url: false
+          body: Pesan kompatibel dengan format Meta WhatsApp Cloud API
+    send-instant-text-message:
+      type: object
+      properties:
+        device_id:
+          type: string
+        phone:
+          type: string
+        message:
+          type: string
+      example:
+        device_id: DEVICE_ID
+        phone: '6281234567890'
+        message: Halo! Ini adalah pesan verifikasi dari Wahide Gateway.
+    send-media-message:
+      type: object
+      properties:
+        device_id:
+          type: string
+        phone:
+          type: string
+        message:
+          type: string
+        media_url:
+          type: string
+        file_name:
+          type: string
+      example:
+        device_id: DEVICE_ID
+        phone: '6281234567890'
+        message: Berikut adalah invoice langganan Anda.
+        media_url: https://pub-r2.wahide.com/media/invoice_1001.pdf
+        file_name: invoice_1001.pdf
+    create-broadcast-campaign:
+      type: object
+      properties:
+        device_id:
+          type: string
+        tag_id:
+          type: string
+        name:
+          type: string
+        message:
+          type: string
+        media_url:
+          type: string
+        min_delay:
+          type: integer
+        max_delay:
+          type: integer
+      example:
+        device_id: DEVICE_ID
+        tag_id: TAG_ID
+        name: Flash Sale Akhir Bulan
+        message: >-
+          Halo {name}, dapatkan diskon 50% untuk langganan Wahide hari ini!
+          Gunakan voucher: {voucher_code}
+        media_url: https://pub-r2.wahide.com/promo.jpg
+        min_delay: 5
+        max_delay: 15
+    bulk-import-contacts:
+      type: object
+      properties:
+        tag_id:
+          type: string
+        contacts:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              phone:
+                type: string
+              variables:
+                type: object
+                properties:
+                  voucher_code:
+                    type: string
+      example:
+        tag_id: TAG_ID
+        contacts:
+          - name: Budi
+            phone: '6281234567891'
+            variables:
+              voucher_code: PROMO1
+          - name: Citra
+            phone: '6281234567892'
+            variables:
+              voucher_code: PROMO2
+    create-contact:
+      type: object
+      properties:
+        name:
+          type: string
+        phone:
+          type: string
+        tag_id:
+          type: string
+        variables:
+          type: object
+          properties:
+            voucher_code:
+              type: string
+            kota:
+              type: string
+      example:
+        name: Ahmad Dani
+        phone: '6281122334455'
+        tag_id: TAG_ID
+        variables:
+          voucher_code: DISC50
+          kota: Surabaya
+    create-audience-tag:
+      type: object
+      properties:
+        name:
+          type: string
+        color:
+          type: string
+      example:
+        name: Pelanggan VIP 2026
+        color: '#4CAF50'
+    create-billing-order:
+      type: object
+      properties:
+        plan_id:
+          type: string
+        payment_method:
+          type: string
+        voucher_code:
+          type: string
+      example:
+        plan_id: PLAN_ID
+        payment_method: XENDIT_QRIS
+        voucher_code: DISKONHEMAT
+    validate-voucher-code:
+      type: object
+      properties:
+        code:
+          type: string
+        amount:
+          type: integer
+      example:
+        code: SUPERPROMO50
+        amount: 299000
+    xendit-payment-webhook:
+      type: object
+      properties:
+        id:
+          type: string
+        external_id:
+          type: string
+        status:
+          type: string
+        amount:
+          type: integer
+      example:
+        id: xendit_tx_12345
+        external_id: BILLING_ID
+        status: PAID
+        amount: 299000
+    create-support-ticket:
+      type: object
+      properties:
+        subject:
+          type: string
+        message:
+          type: string
+        priority:
+          type: string
+      example:
+        subject: Kendala Pairing QR Code
+        message: >-
+          Saya mengalami kegagalan saat scan QR code pada nomor WhatsApp
+          +628123456789.
+        priority: HIGH
+    reply-to-ticket:
+      type: object
+      properties:
+        message:
+          type: string
+        attachment_url:
+          type: string
+      example:
+        message: Berikut saya lampirkan screenshot log error yang muncul.
+        attachment_url: https://pub-r2.wahide.com/tickets/screenshot_1.png
+    broadcast-notification-all-users:
+      type: object
+      properties:
+        title:
+          type: string
+        message:
+          type: string
+        type:
+          type: string
+      example:
+        title: Pemeliharaan Sistem Terjadwal
+        message: >-
+          Server akan melakukan maintenance rutin pada Minggu dini hari pukul
+          01:00 WIB.
+        type: SYSTEM_ALERT
+  requestBodies:
+    forgot-password:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/forgot-password'
+      description: ''
+      required: true
+    login:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/login'
+      description: ''
+      required: true
+    register:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/register'
+      description: ''
+      required: true
+    resend-verification-email:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/resend-verification-email'
+      description: ''
+      required: true
+    reset-password:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/reset-password'
+      description: ''
+      required: true
+    change-password:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/change-password'
+      description: ''
+      required: true
+    create-address:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/create-address'
+      description: ''
+      required: true
+    upsert-address:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/upsert-address'
+      description: ''
+      required: true
+    create-team-agent:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/create-team-agent'
+      description: ''
+      required: true
+    add-user-balance:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/add-user-balance'
+      description: ''
+      required: true
+    change-user-role:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/change-user-role'
+      description: ''
+      required: true
+    create-rbac-role:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/create-rbac-role'
+      description: ''
+      required: true
+    update-user:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/update-user'
+      description: ''
+      required: true
+    reduce-user-balance:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/reduce-user-balance'
+      description: ''
+      required: true
+    update-tenant-webhook:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/update-tenant-webhook'
+      description: ''
+      required: true
+    create-plan:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/create-plan'
+      description: ''
+      required: true
+    assign-subscription-to-tenant:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/assign-subscription-to-tenant'
+      description: ''
+      required: true
+    update-plan:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/update-plan'
+      description: ''
+      required: true
+    create-device-slot:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/create-device-slot'
+      description: ''
+      required: true
+    meta-cloud-api-compatible-send:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/meta-cloud-api-compatible-send'
+      description: ''
+      required: true
+    send-instant-text-message:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/send-instant-text-message'
+      description: ''
+      required: true
+    send-media-message:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/send-media-message'
+      description: ''
+      required: true
+    create-broadcast-campaign:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/create-broadcast-campaign'
+      description: ''
+      required: true
+    bulk-import-contacts:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/bulk-import-contacts'
+      description: ''
+      required: true
+    create-contact:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/create-contact'
+      description: ''
+      required: true
+    create-audience-tag:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/create-audience-tag'
+      description: ''
+      required: true
+    create-billing-order:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/create-billing-order'
+      description: ''
+      required: true
+    validate-voucher-code:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/validate-voucher-code'
+      description: ''
+      required: true
+    xendit-payment-webhook:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/xendit-payment-webhook'
+      description: ''
+      required: true
+    create-support-ticket:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/create-support-ticket'
+      description: ''
+      required: true
+    reply-to-ticket:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/reply-to-ticket'
+      description: ''
+      required: true
+    broadcast-notification-all-users:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/broadcast-notification-all-users'
+      description: ''
+      required: true
+  securitySchemes: {}
